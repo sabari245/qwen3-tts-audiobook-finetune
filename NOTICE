@@ -1,0 +1,12 @@
+qwen3-tts-audiobook-finetune
+Copyright 2026 Sabari Haridoss
+
+This project contains code derived from Qwen3-TTS (https://github.com/QwenLM/Qwen3-TTS),
+Copyright Alibaba Cloud / Qwen team, licensed under the Apache License 2.0:
+
+  scripts/dataset.py  - vendored from finetuning/dataset.py (commit 022e286), unmodified logic
+  scripts/train.py    - adapted from finetuning/sft_12hz.py (commit 022e286); changes are listed
+                        in the file's docstring
+
+Model weights (Qwen/Qwen3-TTS-12Hz-*) are downloaded from Hugging Face at runtime and are subject
+to their own license. No weights, audio or transcripts are distributed with this repository.

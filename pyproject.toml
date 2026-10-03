@@ -1,0 +1,38 @@
+[project]
+name = "qwen3-tts-audiobook-finetune"
+version = "0.1.0"
+description = "Fine-tune Qwen3-TTS on a single narrator's long-form audiobook narration and narrate whole chapters in their voice."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = "==3.12.*"
+dependencies = [
+    "torch==2.11.0",
+    "torchaudio==2.11.0",
+    "qwen-tts==0.1.1",
+    "transformers==4.57.3",
+    "accelerate==1.12.0",
+    "numpy==2.5.3",
+    "soundfile==0.14.0",
+    "librosa==1.0.0",
+    "safetensors==0.8.0",
+    "tqdm==4.70.1",
+    "jiwer==4.0.0",
+    "huggingface-hub[hf-transfer]==0.36.2",
+]
+
+[dependency-groups]
+modal = ["modal==1.5.5"]
+
+[tool.uv]
+package = false
+default-groups = []
+
+[tool.uv.sources]
+qwen-tts = { git = "https://github.com/QwenLM/Qwen3-TTS", rev = "022e286b98fbec7e1e916cb940cdf532cd9f488e" }
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

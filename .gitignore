@@ -1,0 +1,24 @@
+# data, checkpoints and outputs never belong in the repo
+workdir/
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.opus
+*.ogg
+*.webm
+*.vtt
+*.srt
+*.safetensors
+*.pt
+*.bin
+input*.txt
+*.jsonl
+
+# environment / secrets
+.venv/
+__pycache__/
+*.pyc
+.env
+.modal.toml
+.cache/
